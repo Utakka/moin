@@ -1,24 +1,84 @@
 <!DOCTYPE html>
-<html lang="de">
+<html dir="ltr" lang="de" class="no-js">
 
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="robots" content="index, follow, noodp" />
 
-  <title>Moin!</title>
+  <title>Moin Urlaub - Craft CMS Basistemplate</title>
   <meta name="description" content="" />
 
-  <link rel="stylesheet" type="text/css" href="/res/css/main.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-  <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" type="text/css" href="res/csstmp/main.css" />
 
 </head>
 
 <body>
 
-  <h1>Moin!</h1>
+  <div class="off-canvas-wrapper">
+
+
+    <header id="head-menu" data-off-canvas>
+      <div class="grid-x grid-margin-x align-middle align-justify">
+
+        <div class="cell medium-shrink show-for-medium">
+          <a href="#" title="Zur Startseite"><img src="res/img/logo.svg" width="240" height="90" alt="" /></a>
+        </div>
+
+        <nav class="cell medium-shrink flex-container align-middle">
+
+          <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+            <li><a href="#" title="Start">Start</a></li>
+            <li><a href="#" title="Aktuelles">Aktuelles</a></li>
+            <li>
+              <a href="#" title="Land &amp; Leute">Land &amp; Leute</a>
+              <ul class="vertical menu">
+                <li class="hide-for-medium"><a href="#" title="Übersicht">Übersicht</a></li>
+                <li><a href="#" title="Sehenswertes">Sehenswertes</a></li>
+                <li><a href="#" title="Gastronomie">Gastronomie</a></li>
+                <li><a href="#" title="Natur">Natur</a></li>
+                <li><a href="#" title="Sport">Sport</a></li>
+              </ul>
+            </li>
+            <li><a href="#" title="Kontakt">Kontakt</a></li>
+          </ul>
+
+          <form action="#" method="post">
+            <label for="searchphrase"></label>
+            <input type="search" id="searchphrase" name="s" value="" placeholder="Suchbegriff" />
+            <input type="submit" class="button" value="Suche" />
+          </form>
+
+        </nav>
+
+      </div>
+    </header>
+
+
+    <main class="off-canvas-content" data-off-canvas-content>
+
+
+      <div class="hide-for-medium">
+        <button type="button" class="button" data-toggle="head-menu">Menü</button>
+      </div>
+
+
+      <div class="heroshot" style="background-image:url('res/_demobilder/thin-pixabay-free.jpg');">
+        <a class="scrolldown" href="#start" title="Auf geht's" data-smooth-scroll></a>
+      </div>
+      <div id="start"></div>
+
+
+    </main>
+
+
+  </div>
+
+  <script data-main="res/js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js" async></script>
 
 </body>
 
