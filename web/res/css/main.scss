@@ -1,8 +1,36 @@
 @charset "UTF-8";
 
-// Foundation einbinden
+// Foundation einbinden und ausgewaehlte Module aktivieren
 @import "foundation/settings";
-@import "/res/lib/foundation/scss/foundation";
+@import "../lib/foundation/scss/foundation";
+@import "foundation/modules";
 
 // Webfonts
 @import "include/fonts";
+
+body {
+  min-width: 320px;
+  min-height: 400px;
+  overflow-y: scroll;
+}
+
+a {
+  transition: color 200ms;
+}
+
+// Auf kleineren Geräten aktivieren wir die Silbentrennung
+@include breakpoint(medium down) {
+  body {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+// Schriftgroesse je nach Screengroesse anpassen
+@include breakpoint(large)  { body { font-size: $global-font-size + 1; } }
+@include breakpoint(xlarge) { body { font-size: $global-font-size + 2; } }
+
+// Seitenelemente einbinden
+@import "include/header";
+@import "include/heroshot";
+@import "include/footer";
