@@ -47,11 +47,13 @@
             <li><a href="#" title="Kontakt">Kontakt</a></li>
           </ul>
 
-          <form action="#" method="post">
-            <label for="searchphrase"></label>
-            <input type="search" id="searchphrase" name="s" value="" placeholder="Suchbegriff" />
-            <input type="submit" class="button" value="Suche" />
-          </form>
+          <div class="search-wrapper">
+            <label for="searchphrase" data-toggle="search-form"></label>
+            <form action="#" method="post" id="search-form" data-toggler=".isOpen" class="isOpen">
+              <input type="search" name="s" value="" placeholder="Suchbegriff" required />
+              <input type="submit" class="button" value="Suche" title="Suchen" />
+            </form>
+          </div>
 
         </nav>
 
