@@ -1,109 +1,186 @@
-header {
-  padding: 0 50px;
-  > .grid-x { min-height: 130px; }
-}
-
-// Hauptmenue mit optimierten Dropdowns
+// Allgemeines
 nav {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: $header-font-weight;
-
-  .is-dropdown-submenu {
-    padding-top: 10px;
-    text-transform: none;
-    border: none;
-    background: transparent;
-    color: $white;
-    z-index: 2;
-    li { background: $primary-color; }
-    a { color: inherit; }
-  }
-
-  .is-dropdown-submenu::before {
-    @include css-triangle(10px, $primary-color, up);
-    position: absolute;
-    top: 0;
-    left: 2rem;
-  }
-  .opens-left .is-dropdown-submenu::before {
-    left: auto;
-    right: 2rem;
-  }
-
+  ul ul { text-transform: none; }
 }
 
-nav .search-wrapper {
-  padding: 0 5px 0 15px;
-  margin: 0;
-  position: relative;
 
-  label {
-    display: block;
-    background: url('../img/icon_search.svg') no-repeat center center;
-    background-size: contain;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-  }
-
-  form {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 1;
-    margin: 0;
-    width: 250px;
-    padding: 0;
-    max-height: 0px; // fuer aufklapp-animation
-    overflow: hidden;
-    transition: all 200ms;
-    &::before {
-      @include css-triangle(10px, $primary-color, up);
-      position: absolute;
-      top: 10px;
-      right: .5em;
-      z-index: 1;
-    }
-    &.isOpen {
-      padding-top: 20px;
-      max-height: 100px;
-    }
-  }
-
-  input[type="search"] {
-    display: block;
-    width: 100%;
-    height: 50px;
-    margin: 0;
-    padding-right: 50px;
-    border: 5px solid $primary-color;
-    position: relative;
-    z-index: 2;
-  }
-
-  input[type="submit"] {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 3;
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    background: transparent url(../img/icon_arrow.svg) no-repeat center center;
-    background-size: 40% 40%;
-    overflow: hidden;
-    text-indent: -999px;
-  }
-
-}
 
 // Auf kleinen Geräten wird der Header zu einem Off-Canvas Element
 @include breakpoint(small only) {
+  
+  .navbar-mobile {
+    height: 50px;
+    .menu-button span {
+      @include hamburger($primary-color, $primary-color);
+      margin: -2px .5em 0 0;
+    }
+  }
+  
   header {
     @include off-canvas-base();
     @include off-canvas-position();
+    @include xy-grid-container();
+    .logo {
+      max-width: 75%;
+      margin-top: .5em;
+    }
   }
+  
+  nav {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    .menu a { padding: 1rem 0; }
+    .accordion-menu .is-accordion-submenu a { padding-left: 1rem; }
+  }
+  
+  nav .search-wrapper form {
+    display: block;
+    margin: 2em 0 0;
+    padding: 0;
+    position: relative;
+
+    input[type="search"] {
+      width: 100%;
+      padding-right: 40px;
+    }
+    
+    input[type="submit"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 35px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: transparent url(../img/icon_arrow.svg) no-repeat center center;
+      background-size: 40% 40%;
+      overflow: hidden;
+      text-indent: -999px;
+    }
+
+  }
+  
+}
+
+
+
+// Header bei groesseren Geraeten am Seitenanfang zeigen
+@include breakpoint(medium) {
+  
+  header {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 0;
+    > .grid-x { min-height: 130px; }
+  }
+
+  // Schoenere Dropdown Menues
+  nav {
+    display:flex;
+
+    .is-dropdown-submenu {
+      padding-top: 10px;
+      border: none;
+      background: transparent;
+      color: $white;
+      z-index: 2;
+      li { background: $primary-color; }
+      a { color: inherit; }
+    }
+
+    .is-dropdown-submenu::before {
+      @include css-triangle(10px, $primary-color, up);
+      position: absolute;
+      top: 0;
+      left: 2rem;
+    }
+    .opens-left .is-dropdown-submenu::before {
+      left: auto;
+      right: 2rem;
+    }
+
+  }
+
+  // Volltextsuche bei Desktop Geraeten als Aufklapper
+  nav .search-wrapper {
+    padding: 0 5px 0 15px;
+    margin: 0;
+    position: relative;
+
+    label {
+      display: block;
+      background: url('../img/icon_search.svg') no-repeat center center;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    form {
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 1;
+      margin: 0;
+      width: 250px;
+      padding: 0;
+      max-height: 0px; // fuer aufklapp-animation
+      overflow: hidden;
+      transition: all 200ms;
+      &::before {
+        @include css-triangle(10px, $primary-color, up);
+        position: absolute;
+        top: 10px;
+        right: .5em;
+        z-index: 1;
+      }
+      &.isOpen {
+        padding-top: 20px;
+        max-height: 100px;
+      }
+    }
+
+    input[type="search"] {
+      display: block;
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      padding-right: 50px;
+      border: 5px solid $primary-color;
+      position: relative;
+      z-index: 2;
+    }
+
+    input[type="submit"] {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      z-index: 3;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      background: transparent url(../img/icon_arrow.svg) no-repeat center center;
+      background-size: 40% 40%;
+      overflow: hidden;
+      text-indent: -999px;
+    }
+
+  }
+  
+}
+
+
+// Abstaende auf grossen Geraeten anpassen
+@include breakpoint(large) {
+  
+  header {
+    padding: 0 50px;
+  }
+
 }
