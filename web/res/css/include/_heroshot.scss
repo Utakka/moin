@@ -9,33 +9,14 @@
   .scrolldown {
     width: 70px;
     height: 70px;
-    background: $body-background;
+    background: $body-background url(../img/icon_arrow.svg) no-repeat center center;
+    background-size: 50% 50%;
     position: absolute;
     bottom: -35px;
     left: 50%;
     margin-left: -35px;
     border-radius: 100%;
-    &:before, &:after {
-      content: "";
-      width: 3px;
-      height: 35%;
-      background: $primary-color;
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transition: top 100ms;
-    }
-    &:before {
-      margin-left: -2px;
-      transform-origin: 0 100%;
-      transform: rotate(45deg);
-    }
-    &:after {
-      margin-left: -1px;
-      transform-origin: 100% 100%;
-      transform: rotate(-45deg);
-    }
-    &:hover:before, &:hover:after { top: 35%; }
+    transform: rotate(90deg);
   }
 
 }
