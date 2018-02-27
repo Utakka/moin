@@ -22,18 +22,23 @@
   <div class="off-canvas-wrapper">
 
 
-    <header id="head-menu" data-off-canvas data-auto-focus="false">
+    <header id="head-menu" class="off-canvas in-canvas-for-large position-right grid-container" data-off-canvas data-auto-focus="false" data-off-canvas data-transition="overlap">
       <div class="grid-x grid-margin-x align-middle align-justify">
 
-        <div class="cell medium-shrink">
-          <a href="#" title="Zur Startseite"><img class="logo" src="res/img/logo.svg" width="240" height="90" alt="" /></a>
+        <div class="cell large-shrink show-for-large">
+          <a href="/" title="Zur Startseite"><img class="logo" src="res/img/logo.svg" width="174" height="65" alt="" /></a>
         </div>
 
-        <nav class="cell medium-shrink align-middle">
+        <nav class="cell large-shrink align-middle">
 
-          
-          <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
-            <li><a href="#" title="Start">Start</a></li>
+          <div class="hide-for-large menu-head">
+            <button class="close-button" type="button" data-toggle="head-menu">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <ul class="vertical large-horizontal menu" data-responsive-menu="accordion large-dropdown">
+            <li><a class="current" href="#" title="Start">Start</a></li>
             <li><a href="#" title="Aktuelles">Aktuelles</a></li>
             <li>
               <a href="#" title="Land &amp; Leute">Land &amp; Leute</a>
@@ -48,16 +53,16 @@
             <li><a href="#" title="Kontakt">Kontakt</a></li>
           </ul>
 
-          
+
           <div class="search-wrapper">
             <label for="searchphrase" data-toggle="search-form"></label>
             <form action="#" method="post" id="search-form" data-toggler=".isOpen">
-              <input type="search" name="s" value="" placeholder="Suchbegriff" required />
+              <input type="search" id="searchphrase" name="s" value="" placeholder="Suchbegriff" required />
               <input type="submit" class="button" value="Suche" title="Suchen" />
             </form>
           </div>
 
-          
+
         </nav>
 
       </div>
@@ -67,13 +72,14 @@
     <main class="off-canvas-content" data-off-canvas-content>
 
 
-      <div class="hide-for-medium navbar-mobile grid-x grid-padding-x align-middle">
-        <div class="cell shrink"><a href="#menu" class="menu-button" data-toggle="head-menu"><span></span> Menü</a></div>
+      <div class="hide-for-large navbar-mobile grid-x grid-padding-x align-middle align-justify">
+        <div class="cell shrink"><a href="/" title="Zur Startseite"><img class="logo" src="res/img/logo.svg" width="110" height="45" alt="" /></a></div>
+        <div class="cell shrink"><a href="#menu" class="menu-button" data-toggle="head-menu"><span></span></a></div>
       </div>
 
 
-      <div class="heroshot">
-        <div class="heroshot-inner" style="background-image:url('res/_demobilder/thin-pixabay-free.jpg');"></div>
+      <div id="heroshot" data-interchange="[res/_demobilder/thin-600x600_pixabay-free.jpg, small], [res/_demobilder/thin-1200x750_pixabay-free.jpg, medium], [res/_demobilder/thin-1920x1200_pixabay-free.jpg, large]">
+        <noscript><style>#heroshot{background-image:url(res/_demobilder/thin-1200x750_pixabay-free.jpg)}</style></noscript>
         <a class="scrolldown" href="#start" title="Auf geht's" data-smooth-scroll></a>
       </div>
       <div id="start"></div>
