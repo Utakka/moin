@@ -9,33 +9,30 @@ nav {
 
 
 // Auf kleinen Geräten wird der Header zu einem Off-Canvas Element
-@include breakpoint(small only) {
-  
+@include breakpoint(medium down) {
+
   .navbar-mobile {
-    height: 50px;
-    .menu-button span {
-      @include hamburger($primary-color, $primary-color);
-      margin: -2px .5em 0 0;
+    height: 65px;
+    .menu-button {
+      padding: 5px;
+      span {
+        @include hamburger($primary-color, $primary-color);
+      }
     }
   }
-  
-  header {
-    @include off-canvas-base();
-    @include off-canvas-position();
-    @include xy-grid-container();
-    .logo {
-      max-width: 75%;
-      margin-top: .5em;
-    }
+
+  .menu-head {
+    min-height: 65px;
   }
-  
+
   nav {
-    margin-top: 2em;
     margin-bottom: 2em;
+    padding-left: 5px;
+    padding-right: 5px;
     .menu a { padding: 1rem 0; }
     .accordion-menu .is-accordion-submenu a { padding-left: 1rem; }
   }
-  
+
   nav .search-wrapper form {
     display: block;
     margin: 2em 0 0;
@@ -46,7 +43,7 @@ nav {
       width: 100%;
       padding-right: 40px;
     }
-    
+
     input[type="submit"] {
       position: absolute;
       top: 0;
@@ -55,32 +52,46 @@ nav {
       height: 100%;
       margin: 0;
       padding: 0;
-      background: transparent url(../img/icon_arrow.svg) no-repeat center center;
-      background-size: 40% 40%;
+      background: transparent url(../img/icon_search.svg) no-repeat center center;
+      background-size: 60% 60%;
       overflow: hidden;
       text-indent: -999px;
     }
 
   }
-  
+
 }
 
 
 
 // Header bei groesseren Geraeten am Seitenanfang zeigen
-@include breakpoint(medium) {
-  
+@include breakpoint(large) {
+
   header {
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 10px 0;
-    > .grid-x { min-height: 130px; }
+    padding: 5px 10px;
+    &.off-canvas.in-canvas-for-large { overflow: visible; } // Wichtig fuers Aufklapp-Menue
+    > .grid-x { min-height: 150px; }
+  }
+
+  nav .menu a.current {
+    position: relative;
+    &:after {
+      content: "";
+      width: 80%;
+      height: 3px;
+      background: $primary-color;
+      position: absolute;
+      bottom: 5px;
+      left: 10%;
+    }
   }
 
   // Schoenere Dropdown Menues
   nav {
-    display:flex;
+    display: flex;
 
     .is-dropdown-submenu {
       padding-top: 10px;
@@ -107,7 +118,7 @@ nav {
 
   // Volltextsuche bei Desktop Geraeten als Aufklapper
   nav .search-wrapper {
-    padding: 0 5px 0 15px;
+    padding: 0 5px 0 25px;
     margin: 0;
     position: relative;
 
@@ -135,12 +146,12 @@ nav {
       &::before {
         @include css-triangle(10px, $primary-color, up);
         position: absolute;
-        top: 10px;
+        top: 11px;
         right: .5em;
         z-index: 1;
       }
       &.isOpen {
-        padding-top: 20px;
+        padding-top: 21px;
         max-height: 100px;
       }
     }
@@ -172,15 +183,6 @@ nav {
     }
 
   }
-  
-}
-
-
-// Abstaende auf grossen Geraeten anpassen
-@include breakpoint(large) {
-  
-  header {
-    padding: 0 50px;
-  }
 
 }
+

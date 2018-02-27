@@ -1,17 +1,13 @@
-.heroshot {
-  height: 80vh; // fallback
-  height: calc(100vh - 50px);
+#heroshot {
+  height: 70vh; // fallback
+  height: calc(100vh - 110px);
   max-height: 750px;
   max-width: $max-width;
-  margin: 0 auto 50px;
+  margin: 0 auto 85px;
   padding: 0;
   position: relative;
-  
-  .heroshot-inner {
-    height: 100%;
-    background: $light-gray no-repeat center center;
-    background-size: cover;
-  }
+  background: $light-gray no-repeat center center;
+  background-size: cover;
 
   .scrolldown {
     width: 70px;
@@ -19,7 +15,7 @@
     background: $body-background url(../img/icon_arrow.svg) no-repeat center center;
     background-size: 50% 50%;
     position: absolute;
-    bottom: 35px;
+    bottom: -35px;
     left: 50%;
     margin-left: -35px;
     border-radius: 100%;
@@ -31,17 +27,10 @@
 
 // Auf groesseren Geraeten haben wir an den Seiten mehr Abstand
 @include breakpoint(large) {
-  
-  .heroshot {
-    height: calc(100vh - 180px);
+
+  #heroshot {
+    height: calc(100vh - 210px);
     max-height: 1100px;
-    padding-right: 50px;
-    padding-left: 50px;
-    
-    .scrolldown {
-      bottom: -35px;
-    }
-    
   }
-  
+
 }
