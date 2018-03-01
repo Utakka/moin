@@ -19,20 +19,28 @@
 
 <body>
 
-  <div class="off-canvas-wrapper">
+  <div id="top" class="off-canvas-wrapper flex-container flex-dir-column">
 
 
-    <header id="head-menu" data-off-canvas>
+    <header id="head-menu" class="off-canvas in-canvas-for-large position-right grid-container" data-off-canvas data-auto-focus="false" data-off-canvas data-transition="overlap">
       <div class="grid-x grid-margin-x align-middle align-justify">
 
-        <div class="cell medium-shrink show-for-medium">
-          <a href="#" title="Zur Startseite"><img src="res/img/logo.svg" width="240" height="90" alt="" /></a>
+
+        <div class="cell large-shrink show-for-large">
+          <a href="/" title="Zur Startseite"><img class="logo" src="res/img/logo.svg" width="174" height="65" alt="" /></a>
         </div>
 
-        <nav class="cell medium-shrink flex-container align-middle">
 
-          <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
-            <li><a href="#" title="Start">Start</a></li>
+        <nav class="cell large-shrink align-middle">
+
+
+          <div class="hide-for-large menu-head" area-hidden="true">
+            <button class="close-button" type="button" data-toggle="head-menu">&times;</button>
+          </div>
+
+
+          <ul class="vertical large-horizontal menu" data-responsive-menu="accordion large-dropdown">
+            <li><a class="current" href="#" title="Start">Start</a></li>
             <li><a href="#" title="Aktuelles">Aktuelles</a></li>
             <li>
               <a href="#" title="Land &amp; Leute">Land &amp; Leute</a>
@@ -47,38 +55,225 @@
             <li><a href="#" title="Kontakt">Kontakt</a></li>
           </ul>
 
-          <form action="#" method="post">
-            <label for="searchphrase"></label>
-            <input type="search" id="searchphrase" name="s" value="" placeholder="Suchbegriff" />
-            <input type="submit" class="button" value="Suche" />
-          </form>
+
+          <div class="search-wrapper">
+            <label for="searchphrase" data-toggle="search-form"></label>
+            <form action="#" method="post" id="search-form" data-toggler=".isOpen">
+              <input type="search" id="searchphrase" name="s" value="" placeholder="Suchbegriff" required />
+              <input type="submit" class="button" value="Suche" title="Suchen" />
+            </form>
+          </div>
+
 
         </nav>
+
 
       </div>
     </header>
 
 
-    <main class="off-canvas-content" data-off-canvas-content>
+    <div class="off-canvas-content flex-container flex-dir-column flex-child-grow" data-off-canvas-content>
 
 
-      <div class="hide-for-medium">
-        <button type="button" class="button" data-toggle="head-menu">Menü</button>
-      </div>
+      <main class="flex-child-grow">
 
 
-      <div class="heroshot" style="background-image:url('res/_demobilder/thin-pixabay-free.jpg');">
-        <a class="scrolldown" href="#start" title="Auf geht's" data-smooth-scroll></a>
-      </div>
-      <div id="start"></div>
+        <div class="hide-for-large navbar-mobile grid-x grid-padding-x align-middle align-justify" area-hidden="true">
+          <div class="cell shrink"><a href="/" title="Zur Startseite"><img class="logo" src="res/img/logo.svg" width="110" height="45" alt="" /></a></div>
+          <div class="cell shrink"><a class="menu-button" data-toggle="head-menu"><span></span></a></div>
+        </div>
 
 
-    </main>
+        <div id="heroshot" data-interchange="[res/_demobilder/thin-600x600_pixabay-free.jpg, small], [res/_demobilder/thin-1200x750_pixabay-free.jpg, medium], [res/_demobilder/thin-1920x1200_pixabay-free.jpg, large]">
+          <noscript><style>#heroshot{background-image:url(res/_demobilder/thin-1200x750_pixabay-free.jpg)}</style></noscript>
+          <a class="scrolldown" href="#start" title="Auf geht's" data-smooth-scroll area-hidden="true"></a>
+        </div>
+        <div id="start"></div>
+
+
+        <section class="grid-container widget-type-text widget-margin-top widget-margin-bottom">
+          <div class="grid-x grid-padding-x align-center">
+            <div class="cell medium-10 large-8">
+
+              <h4>Norden der Welt</h4>
+              <h1>Moin Urlaub!</h1>
+
+              <p>
+                Und der Tag wird kommen an dem wir alle unsere Gläser heben. Durch die Decke schweben, mit 'nem Toast den
+                hochleben lassen. Auf den ersten, der's packt, den Mutigsten von allen. Der erste, der's schafft. Es wird
+                der Tag sein, an dem wir <strong>die Liebe, die Freiheit und das Leben</strong> feiern. Jeder liebt den, den er will und
+                der Rest bleibt still. Ein Tag, als hätte man gewonnen. Dieser Tag wird kommen!
+              </p>
+
+              <p>
+                Hier kommt das was wir tun werden. Wir werden Briefe schreiben, <strong>seitenweise weise sein</strong>. Werden fluchend
+                anfangen und liebevoll enden. Werden jeden Satz hassen, aber leider so meinen. Ein letztes mal lesen und
+                nie absenden. Werden dann unter Menschen erfahren wie es geht, einmal kurz nach dem Sturm mit dem Kopf
+                nicken und werden unter keinen Umständen, nie wirklich nie <strong>nachts betrunken SMS schicken</strong>.
+              </p>
+
+              <p>
+                Und dein Herz lächelt milde wärend es spricht, gute Ideen aber schaff es ja doch nicht. In den dunklesten
+                Stunden werden wir da sein, kurz erklären was wir tun werden.
+              </p>
+
+            </div>
+          </div>
+        </section>
+
+
+        <div class="grid-container widget-type-teaser widget-margin-top widget-margin-bottom">
+          <div class="grid-x grid-margin-x align-center">
+
+            <a href="#" class="cell medium-6 large-4 teaser" title="Das ist uns're Zeit">
+              <div class="teaser-img-wrapper">
+                <img src="res/_demobilder/beach-1920x1200_pixabay-free.jpg" alt="" />
+              </div>
+              <div class="teaser-text-wrapper">
+                <h4>Das ist uns're Zeit</h4>
+                Nur weil man sich so dran gewöhnt hat, ist es nicht normal.
+                Nur weil man es nicht besser kennt, ist es nicht egal.
+              </div>
+            </a>
+
+            <a href="#" class="cell medium-6 large-4 teaser" title="Paris im Herbst">
+              <div class="teaser-img-wrapper">
+                <img src="res/_demobilder/bicycle-1920x1200_pixabay-free.jpg" alt="" />
+              </div>
+              <div class="teaser-text-wrapper">
+                <h4>Paris im Herbst</h4>
+                Hast du jemals den Eiffelturm von unten gesehen?
+                Ich stand unter ihm und es war wunderschön.
+              </div>
+            </a>
+
+            <a href="#" class="cell medium-6 large-4 teaser" title="Name an der Wand">
+              <div class="teaser-img-wrapper">
+                <img src="res/_demobilder/clubs-1920x1200_pixabay-free.jpg" alt="" />
+              </div>
+              <div class="teaser-text-wrapper">
+                <h4>Name an der Wand</h4>
+                Ich werde immer an dich glauben, egal was auch passiert. Manche singen von Liebe,
+                ich sang die ganze Zeit von dir.
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+
+        <section class="grid-container widget-type-text widget-margin-top widget-margin-bottom">
+          <div class="grid-x grid-padding-x align-center">
+            <div class="cell medium-10 large-8">
+
+              <h3>Die Schönheit der Chance</h3>
+
+              <p>
+                Vor dem Fenster meiner Wohnung steht ein alter Mann und lacht. Über die Dummheit seiner Jugend, die
+                verbrannte Leidenschaft. Ein Mädchen hat im Hinterhof die Wände angemalt. Liebe ist so doof, wenn man
+                am Ende nur bezahlt.
+              </p>
+
+              <p>
+                Wie oft muss man mit dem Kopf gegen die Wand rennen, um für sich selber zu erkennen:
+              </p>
+
+              <ul>
+                <li>Wenn es gut ist wird es schön sein und ein Leben lang passieren</li>
+                <li>Wenn es böse ist dann beißt es und du wirst es schnell verlieren</li>
+                <li>Wenn es gut ist wird es da sein wann immer du es brauchst</li>
+                <li>Wenn es böse ist dann beißt es und dein Herz gibt langsam auf</li>
+              </ul>
+
+              <p>
+                Ich programmier eure Welt und mach das dann zu Gold. Ich werde die Clubs aufkaufen in die ihr rein wollt.
+                Mit dem Porsche vorfahren, so soll es sein. Und ihr könnt einmal kurz gucken und kommt nicht rein. Dies
+                ist meine Zeit, sie ist für mich gemacht. Und ihr schüttelt die Köpfe und hättet nicht gedacht, dass der
+                Freak von damals sich das Leben wiederholt. Revenge is a dish best eat cold.
+              </p>
+
+            </div>
+          </div>
+        </section>
+
+
+        <section class="grid-container widget-type-slider widget-margin-top widget-margin-bottom">
+          <div class="grid-x grid-margin-x align-center">
+            <div class="cell large-10 orbit" data-orbit data-auto-play="false" data-use-m-u-i="false">
+
+              <div class="orbit-wrapper">
+
+                <div class="orbit-controls">
+                  <button class="orbit-previous"></button>
+                  <button class="orbit-next"></button>
+                </div>
+
+                <ul class="orbit-container">
+                  <li class="orbit-slide is-active">
+                    <img class="orbit-image" src="res/_demobilder/engagement-1920x1200_pixabay-free.jpg" alt="" />
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="res/_demobilder/clouds-1920x1200_pixabay-free.jpg" alt="" />
+                  </li>
+                  <li class="orbit-slide">
+                    <img class="orbit-image" src="res/_demobilder/thin-1920x1200_pixabay-free.jpg" alt="" />
+                  </li>
+                </ul>
+
+              </div>
+
+                <div class="orbit-bullets">
+                  <button class="is-active" data-slide="0"></button>
+                  <button data-slide="1"></button>
+                  <button data-slide="2"></button>
+                </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <section class="grid-container widget-type-text widget-margin-top widget-margin-bottom">
+          <div class="grid-x grid-padding-x align-center">
+            <div class="cell medium-10 large-8">
+
+              <h3>Im Zweifel für den Zweifel</h3>
+
+              <p>
+                Geh' doch mal zum Bahnhof, in der sogenannten Frühlingszeit. Sag 'Hallo' zu einem Fremden, der
+                dem Zug entsteigt. Lad' ihn ein zu Cola, im Imbiss gegenüber. Vielleicht hat er Probleme und
+                möchte reden... darüber. Wahrscheinlich hat er gar keine Zeit. Die Idee ist gut, doch die Welt
+                noch nicht bereit.
+              </p>
+
+              <p>
+                Und ich weiß, weiß, weiß der King ist der König. Nur die tote Idee ist am Ende zu wenig. Wenn alle nackt sind,
+                <strong>wer ist dann der Rebell?</strong> Distinktion und Einbauküche, dort hinten verteilen sie Wachsmalstifte. Ich glaube die
+                Styler die anders sein wollen, wollen malen. Nach Zahlen!
+              </p>
+
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+
+
+      <footer class="text-center flex-child-shrink align-self-bottom">
+        <a href="#" title="Kontakt">Kontakt</a> &middot;
+        <a href="#" title="Datenschutz">Datenschutz</a> &middot;
+        <a href="#" title="Impressum">Impressum</a>
+        <a class="scrollup" href="#top" title="Zum Seitenanfang" data-smooth-scroll></a>
+      </footer>
+
+
+    </div>
 
 
   </div>
 
-  <script data-main="res/js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js" async></script>
+  <script data-main="res/js/main.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" async crossorigin="anonymous"></script>
 
 </body>
 

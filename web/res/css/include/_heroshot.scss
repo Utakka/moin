@@ -1,41 +1,36 @@
-.heroshot {
-  height: 80vh; // fallback
-  height: calc(100vh - 180px);
-  margin: 0 50px 50px;
+#heroshot {
+  height: calc(100vh - 170px);
+  max-height: 700px;
+  max-width: $max-width;
+  margin: 0 auto 85px;
+  padding: 0;
+  position: relative;
   background: $light-gray no-repeat center center;
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
 
+  // Pfeil nach unten (Auf gehts)
   .scrolldown {
     width: 70px;
     height: 70px;
-    background: $body-background;
+    background: $body-background url(../img/icon_arrow.svg) no-repeat center center;
+    background-size: 50% 50%;
     position: absolute;
     bottom: -35px;
     left: 50%;
     margin-left: -35px;
     border-radius: 100%;
-    &:before, &:after {
-      content: "";
-      width: 3px;
-      height: 35%;
-      background: $primary-color;
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transition: top 100ms;
-    }
-    &:before {
-      margin-left: -2px;
-      transform-origin: 0 100%;
-      transform: rotate(45deg);
-    }
-    &:after {
-      margin-left: -1px;
-      transform-origin: 100% 100%;
-      transform: rotate(-45deg);
-    }
-    &:hover:before, &:hover:after { top: 35%; }
+    transform: rotate(90deg);
+  }
+
+}
+
+
+@include breakpoint(large) {
+
+  #heroshot {
+    height: calc(100vh - 210px);
+    max-height: 1100px;
   }
 
 }

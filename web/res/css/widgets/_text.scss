@@ -1,0 +1,16 @@
+// Text Widget
+.widget-type-text {
+
+  // Wenn Text Widget direkt auf Text Widget folgt, entfernen wir den Abstand zwischen den beiden
+  + .widget-type-text.widget-margin-top {
+    margin-top: 0;
+  }
+  &.widget-margin-bottom + .widget-type-text {
+    @each $size, $margin in $widget-margin-bottom {
+      @include breakpoint($size) {
+        margin-top: -$margin;
+      }
+    }
+  }
+
+}
