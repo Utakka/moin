@@ -1,14 +1,15 @@
 #heroshot {
-  height: 70vh; // fallback
-  height: calc(100vh - 110px);
-  max-height: 750px;
+  height: calc(100vh - 170px);
+  max-height: 700px;
   max-width: $max-width;
   margin: 0 auto 85px;
   padding: 0;
   position: relative;
   background: $light-gray no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
 
+  // Pfeil nach unten (Auf gehts)
   .scrolldown {
     width: 70px;
     height: 70px;
@@ -25,7 +26,6 @@
 }
 
 
-// Auf groesseren Geraeten haben wir an den Seiten mehr Abstand
 @include breakpoint(large) {
 
   #heroshot {

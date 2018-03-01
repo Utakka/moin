@@ -14,6 +14,11 @@ body {
   overflow-y: scroll;
 }
 
+// Wrapper auf maximale Hoehe setzen, damit der Footer immer am Seitenende ist
+#top {
+  min-height: 100vh;
+}
+
 a {
   transition: color 200ms;
 }
@@ -26,11 +31,16 @@ a {
   }
 }
 
-// Schriftgroesse je nach Screengroesse anpassen
-@include breakpoint(large)  { body { font-size: $global-font-size + 1; } }
-@include breakpoint(xlarge) { body { font-size: $global-font-size + 2; } }
+// Schriftgroesse auf grossen Geraeten anpassen
+@include breakpoint(large) { body { font-size: $global-font-size + 1; } }
 
-// Seitenelemente einbinden
+// Allgemeine Layout-Elemente
 @import "include/header";
 @import "include/heroshot";
 @import "include/footer";
+
+// Widgets
+@import "widgets/basis";
+@import "widgets/text";
+@import "widgets/teaser";
+@import "widgets/slider";

@@ -67,6 +67,15 @@
 // ---------
 
 $max-width: 1920px;
+$global-weight-medium: 400;
+$widget-margin-top: (
+  small: 3.5rem,
+  large: 5rem,
+);
+$widget-margin-bottom: (
+  small: 3.5rem,
+  large: 5rem,
+);
 
 
 // 1. Global
@@ -94,8 +103,8 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: 400;
-$global-weight-bold: 600;
+$global-weight-normal: 300;
+$global-weight-bold: 700;
 $global-radius: 0;
 $global-menu-padding: 1rem;
 $global-menu-nested-margin: 1rem;
@@ -141,23 +150,23 @@ $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-color: $secondary-color;
+$header-lineheight: 1.15;
+$header-margin-bottom: 1rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
+    'h1': ('font-size': 32),
+    'h2': ('font-size': 32),
+    'h3': ('font-size': 24),
+    'h4': ('font-size': 20),
+    'h5': ('font-size': 18),
     'h6': ('font-size': 16),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h1': ('font-size': 46),
+    'h2': ('font-size': 46),
+    'h3': ('font-size': 30),
+    'h4': ('font-size': 24),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -524,14 +533,14 @@ $maincontent-class: 'off-canvas-content';
 // ---------
 
 $orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
-$orbit-bullet-diameter: 1.2rem;
-$orbit-bullet-margin: 0.1rem;
-$orbit-bullet-margin-top: 0.8rem;
-$orbit-bullet-margin-bottom: 0.8rem;
-$orbit-caption-background: rgba($black, 0.5);
+$orbit-bullet-background-active: $secondary-color;
+$orbit-bullet-diameter: .75rem;
+$orbit-bullet-margin: .15rem;
+$orbit-bullet-margin-top: .3rem;
+$orbit-bullet-margin-bottom: 1rem;
+$orbit-caption-background: rgba($black, 0.25);
 $orbit-caption-padding: 1rem;
-$orbit-control-background-hover: rgba($black, 0.5);
+$orbit-control-background-hover: inherit;
 $orbit-control-padding: 1rem;
 $orbit-control-zindex: 10;
 

@@ -1,3 +1,31 @@
 footer {
-  
+  background: $secondary-color;
+  color: $white;
+  width: 100%;
+  padding: rem-calc(75) 15px rem-calc(50);
+  margin: 80px 0 0;
+  position: relative;
+  font-weight: $global-weight-medium;
+  font-size: 1rem;
+
+  a {
+    display: inline-block;
+    color: inherit;
+    margin: 0 .5em;
+  }
+
+  // Pfeil nach oben (Zum Seitenanfang)
+  a.scrollup {
+    width: 70px;
+    height: 70px;
+    background: $body-background url(../img/icon_arrow.svg) no-repeat center center;
+    background-size: 50% 50%;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    margin: 0 0 0 -35px;
+    border-radius: 100%;
+    transform: rotate(-90deg);
+  }
+
 }
