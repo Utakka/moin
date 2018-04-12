@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 805 805" style="enable-background:new 0 0 805 805;" xml:space="preserve">
-  <circle style="fill:#2bbd98;" cx="402.5" cy="402.5" r="400"/>
+  <circle style="fill:#67a9dc;" cx="402.5" cy="402.5" r="400"/>
   <path style="fill:#FFFFFF;" d="M469.73,144.55h99.4l-39.2,493.5h-112l21-259l-109.2,177.1h-82.6l-81.2-168.7l-20.3,250.6h-112 l39.2-493.5h101.5l123.9,275.8L469.73,144.55z"/>
   <path style="fill:#FFFFFF;" d="M622.05,510.65h129.5l-10.5,127.4h-129.5L622.05,510.65z M652.85,467.25l-13.3-323.4l151.9,0.7 l-63.7,322.7H652.85z"/>
 </svg>
