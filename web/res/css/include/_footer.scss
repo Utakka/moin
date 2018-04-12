@@ -12,6 +12,7 @@ footer {
     display: inline-block;
     color: inherit;
     margin: 0 .5em;
+    &:hover, &:focus { color: inherit; }
   }
 
   // Pfeil nach oben (Zum Seitenanfang)

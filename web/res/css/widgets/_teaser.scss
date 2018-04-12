@@ -5,7 +5,11 @@
   // Layout eines einzelnen Teasers
   .teaser {
     background: $light-gray;
-    color: $black;
+    color: $body-font-color;
+
+    h3, h4, h5 {
+      color: inherit;
+    }
 
     // Abstand nach unten
     @each $size, $margin in $grid-column-gutter {
@@ -16,10 +20,11 @@
 
     .teaser-img-wrapper {
       overflow: hidden;
+      position: relative;
     }
 
     .teaser-text-wrapper {
-      padding: 1.5rem;
+      padding: 1.5rem 1.75rem;
     }
 
   }

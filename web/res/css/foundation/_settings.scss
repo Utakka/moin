@@ -85,7 +85,7 @@ $global-font-size: 16px;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2bbd98,
+  primary: #67a9dc,
   secondary: #4e4f59,
   success: #3adb76,
   warning: #ffae00,
@@ -147,17 +147,17 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-bold;
+$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: $secondary-color;
+$header-color: $primary-color;
 $header-lineheight: 1.15;
 $header-margin-bottom: 1rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 32),
-    'h2': ('font-size': 32),
-    'h3': ('font-size': 24),
+    'h1': ('font-size': 36),
+    'h2': ('font-size': 36),
+    'h3': ('font-size': 26),
     'h4': ('font-size': 20),
     'h5': ('font-size': 18),
     'h6': ('font-size': 16),
@@ -165,7 +165,7 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 46),
     'h2': ('font-size': 46),
-    'h3': ('font-size': 30),
+    'h3': ('font-size': 32),
     'h4': ('font-size': 24),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
@@ -183,8 +183,8 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $secondary-color;
-$anchor-color-hover: $primary-color;
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -532,8 +532,8 @@ $maincontent-class: 'off-canvas-content';
 // 26. Orbit
 // ---------
 
-$orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $secondary-color;
+$orbit-bullet-background: $light-gray;
+$orbit-bullet-background-active: $dark-gray;
 $orbit-bullet-diameter: .75rem;
 $orbit-bullet-margin: .15rem;
 $orbit-bullet-margin-top: .3rem;

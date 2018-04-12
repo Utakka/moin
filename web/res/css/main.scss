@@ -23,6 +23,10 @@ a {
   transition: color 200ms;
 }
 
+h1, h2 {
+  margin-bottom: $header-margin-bottom + .75;
+}
+
 // Auf kleineren Geräten aktivieren wir die Silbentrennung
 @include breakpoint(medium down) {
   body {
@@ -38,6 +42,7 @@ a {
 @import "include/header";
 @import "include/heroshot";
 @import "include/footer";
+@import "include/media-source";
 
 // Widgets
 @import "widgets/basis";
