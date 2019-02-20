@@ -4,14 +4,10 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "^3.0.0",
-    "foundation": "zurb/foundation-sites#^6.4.0",
-    "fancybox": "fancyapps/fancybox#^3.2.0"
+    "foundation": "zurb/foundation-sites#^6.4.0"
   },
   "extended-dependencies": {
     "requirejs": "^2.3.0",
     "svg4everybody": "^2.1.0"
-  },
-  "scripts": {
-    "postinstall": "npm install fs-extra && node postinstall.js"
   }
 }
