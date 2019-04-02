@@ -1,3 +1,3 @@
 # Moin!
 proof of concept<br/>
-boilerplat idea for craft cms<br/>
+boilerplate idea for craft cms<br/>
