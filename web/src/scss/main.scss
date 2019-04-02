@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+// webfonts
+@import "include/fonts";
+
+// foundation settings
+@import "foundation/settings";
+@import "../../../node_modules/foundation-sites/scss/foundation";
+@import "foundation/modules";
+
+
+html {
+  height: 100%; 
+}
+
+body {
+
+}
+
+// hyphens for small screens
+@include breakpoint(medium down) {
+  body {
+    hyphens: auto;
+  }
+}
+
+// Includes
+//@import "include/header";
+//@import "include/main";
+//@import "include/footer";
+
+// Widgets
+ 

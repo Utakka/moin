@@ -1,13 +1,26 @@
 {
-  "name": "_moin_",
-  "version": "0.1.0",
+  "name": "moin",
+  "version": "0.2.0",
+  "description": "Boilerplate for Craft CMS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Utakka/moin.git"
+  },
+  "author": "Stockwerk2",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.0.0",
-    "foundation": "zurb/foundation-sites#^6.4.0"
-  },
-  "extended-dependencies": {
-    "requirejs": "^2.3.0",
-    "svg4everybody": "^2.1.0"
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.3.1",
+    "foundation-sites": "^6.5.3",
+    "swiper": "^4.5.0",
+    "requirejs": "^2.3.6"
   }
 }
