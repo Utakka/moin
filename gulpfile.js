@@ -61,5 +61,7 @@ gulp.task('watchsass', gulp.series('sass', function(){
 }));
 
 
-// default task
-gulp.task('default', gulp.parallel('watchsass','watchjs','vendor'));
+// default tasks
+gulp.task('build', gulp.series('sass','js','vendor'));
+gulp.task('watch', gulp.parallel('watchsass','watchjs','vendor'));
+gulp.task('default', gulp.series('watch'));
