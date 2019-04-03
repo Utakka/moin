@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  &__menubtn {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: $white;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px 0 70px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,.25);
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 28px;
+      width: 22px;
+      height: 8px;
+      border-top: 2px solid $primary-color;
+      border-bottom: 2px solid $primary-color;
+      margin-top: -1px;
+    }
+    &::before { margin-top: -7px; }
+
+  }
+
+}

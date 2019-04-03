@@ -1,0 +1,59 @@
+header {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  position: relative;
+
+  .logo {
+    display: block;
+    width: 240px;
+    max-width: 75%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+}
+
+.heroshot {
+  height: 100vh;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    background: $light-gray no-repeat center center;
+    background-size: cover;
+  }
+
+  &__scrolldown {
+    width: 120px;
+    height: 70px;
+    background: $white;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    transform: translateX(-50%);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.25);
+  }
+
+  // parallax
+  @include breakpoint(large down) {
+    .heroshot__image {
+      transform: none !important; // prevent parallax on smaller screen
+    }
+  }
+  @include breakpoint(xlarge) {
+    .heroshot__image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: translateY(0%);
+      transition: transform 20ms linear;
+    }
+  }
+
+}
