@@ -3,6 +3,7 @@
 /modules
 /storage
 /vendor
+/web/cpresources
 /.env
 /.idea
 .DS_Store
